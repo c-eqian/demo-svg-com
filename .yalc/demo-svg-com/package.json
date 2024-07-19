@@ -1,0 +1,37 @@
+{
+  "name": "demo-svg-com",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "generate": "tsx src/script/generate.ts",
+    "build:components": "tsx src/script/build.ts && npm run build:types",
+    "build:types": "vue-tsc --declaration --emitDeclarationOnly -p tsconfig.app.json",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "demo-svg-com": "file:.yalc/demo-svg-com",
+    "vue": "^3.4.31"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./global": {
+      "types": "./dist/types/global.d.ts",
+      "require": "./dist/global.cjs",
+      "import": "./dist/global.js"
+    },
+    "./*": "./*"
+  },
+  "yalcSig": "12ffb6d510c5ef6fb774daee0b81fd9d"
+}

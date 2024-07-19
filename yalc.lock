@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "demo-svg-com": {
+      "signature": "12ffb6d510c5ef6fb774daee0b81fd9d",
+      "file": true
+    }
+  }
+}
